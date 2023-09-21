@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DigitalClock</title>
+    <style>
+        #DigitalClock {
+            font-size: 60px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 200px;
+            color: blue;
+
+        }
+        body
+        {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div id="DigitalClock"></div>
+<script type="text/javascript">
+function showTime(){
+    var date = new Date();
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+
+    var timeString = h + ":" + m + ":" + s;
+    document.getElementById("DigitalClock").innerHTML = timeString;
+
+    setTimeout(showTime, 1000);
+}
+showTime();
+</script>
+</body>
+</html>
